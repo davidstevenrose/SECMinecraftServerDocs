@@ -11,7 +11,7 @@ Given the above plugins, the server acheives:
 
 This document identifies 3 Spigot/Bukkit plugins:
 - LockettePro: https://www.spigotmc.org/resources/lockettepro-for-1-14-1-15-1-16.74354/
-- World Gaurd: https://dev.bukkit.org/projects/worldguard (WorldEdit)
+- World Gaurd: https://dev.bukkit.org/projects/worldguard (requires WorldEdit)
 - EssentialsX: https://www.spigotmc.org/resources/essentialsx.9089/
 
 ##How to install spigot/bukkit plugins
