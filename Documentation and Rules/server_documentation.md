@@ -18,8 +18,8 @@ The Software Engineering Club is proposing a Minecraft server for the club parti
 ## JVM setup
 The club currently has a server running the Linux OS with the command line interface. It is recommended that the next course of action is to install OpenJDK 11, which comes with the JVM.
 ## Minecraft server setup
-All information on the computer relating to the Minecraft server shall be stored in a directory called 'minecraft'. If this directory does not exist, one will be created. 
-Inside this directory, the binary libraries for the Minecraft server need to be installed. Use the following command:
+All information on the computer relating to the Minecraft server shall be stored in a directory called 'minecraft'. If this directory does not exist, one will be created (made manually). 
+Inside this directory, the binary libraries for the Minecraft server need to be installed. The requirements provided by the club officers requires the instalation of a spigot server. Use the following command:
 ___Java edition 1.16.4___
 `wget https://launcher.mojang.com/v1/objects/35139deedbd5182953cf1caa23835da59ca3d7cd/server.jar`
 
