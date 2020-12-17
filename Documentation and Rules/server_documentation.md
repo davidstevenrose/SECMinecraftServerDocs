@@ -19,12 +19,12 @@ The Software Engineering Club is proposing a Minecraft server for the club parti
 The club currently has a server running the Linux OS with the command line interface. It is recommended that the next course of action is to install OpenJDK 11, which comes with the JVM.
 ## Minecraft server setup
 All information on the computer relating to the Minecraft server shall be stored in a directory called 'minecraft'. If this directory does not exist, one will be created (made manually). 
-Inside this directory, the binary libraries for the Minecraft server need to be installed. The requirements provided by the club officers requires the instalation of a spigot server. Use the following command:
+Inside this directory, the binary libraries for the Minecraft server need to be installed. Use the following command:
 ___Java edition 1.16.4___
 `wget https://launcher.mojang.com/v1/objects/35139deedbd5182953cf1caa23835da59ca3d7cd/server.jar`
 
 A file called `server.jar.1` will be downloaded into the minecraft directory.
-Before starting the server, we need to accept the EULA. Do this by running in the command line `java -jar server.jar nogui`. This will generate eula.txt in the same directory. In eula.txt, change `eula=false` to 1eula=true` and save the changes.
+Before starting the server, we need to accept the EULA. Do this by running in the command line `java -jar server.jar nogui`. This will generate eula.txt in the same directory. In eula.txt, change `eula=false` to `eula=true` and save the changes.
 ## Server properties
 In the directory where eula.txt was generated, a server.properties file should also have been generated. This file stores settings for a multiplayer server. These settings can be negotiated with club officers. Upon modification of these settings, the server must be restarted from the command line or with the `/reload` command in-game for changes to take effect. 
 The server.properties file can be found in this repository.
@@ -48,3 +48,34 @@ As stated to be in the scope of the Software Engineering Club, rules must be pro
 Operators are administrators of the Minecraft server. They may perform ops commands in-game or remotely in the server console via RCOM, if this is enabled in the server properties. [the password to connect to RCOM console is saved in server.properties]
 ## Add-ons 
 Add-ons are mods, resource packs, and data packs for the base game. The inclusion for add-ons can be negotiates with operators, club officers and the club members who use the server.
+
+# Spigot server
+The requirements provided by the club officers requires the instalation of a spigot server. The club officers would like to install spigot plugins such as World Gaurd, check lock, etc.
+## Server setup
+Create a directory other than the Minecraft directory. At this step, open JDK should already be installed. download the spigot build tools to the new directory:
+`wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar`
+
+Start the build tools script to create the server files. The server files (.jar) will be created in the file location you are at right now:
+`
+git config —global —unset core.autocrif
+
+java -jar BuildTools.jar
+`
+The server files start to build. Copy the server files to the Minecraft directory, such as `/etc/minecraftserver`.
+`cp spigot.jar /etc/minecraftserver/`
+
+Navigate to the minecraft server directory. Create this start up script and run it to generate everything needed for the server. In the server directory:
+`nano start.sh`
+Paster the following code in the text editor:
+`
+while true; do echo "Starting server now!";
+java -Xmx32G -Xms1024M -XX:+UseConcMarkSweepGC -jar spigot.jar nogui
+echo "Server restarting in 5 seconds! Press control+c to stop!"; sleep 5; done;
+`
+The parameter -XX:+UseConcMarkSweepGC defines the garbage collection to operate on the heap.
+Save the file and exit.
+Run minecraft for the first time using `./start.sh` and accept the EULA agreement as stated above.
+Running the new spigot server is now eauivalent to running a normal minecraft server. Make sure to run `screen ./start.sh` or the server wll shut down when you close your ssh connection. If a new ssh connection is started, run the following command to open the running server: `screen -r`. Run `stop` to stop the server.
+
+## Reference:
+https://www.vpsserver.com/community/tutorials/4005/minecraft-spigot-bukkit-server-on-ubuntu/
