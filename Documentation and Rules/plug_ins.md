@@ -1,4 +1,4 @@
-##Plug-Ins
+## Plug-Ins
 From the word of SEC president Jeremy Martin, the following plugins are recommended:
 World Gaurd
 Chest Lock
@@ -14,6 +14,6 @@ This document identifies 3 Spigot/Bukkit plugins:
 - World Gaurd: https://dev.bukkit.org/projects/worldguard (requires WorldEdit)
 - EssentialsX: https://www.spigotmc.org/resources/essentialsx.9089/
 
-##How to install spigot/bukkit plugins
-spigot plugins are compatiable with bukkit servers
+## How to install spigot/bukkit plugins
+spigot plugins are compatiable with bukkit servers. See server_documentation.md on instruction on setting up spigot server.
 
