@@ -9,10 +9,16 @@ Given the above plugins, the server acheives:
 - setup 3-dimentional zones in world to protect spawn and other areas of world, create places where players can own plots, prevent PvP combat in neutral zones, and more.
 - lock chests by placing a sign on the chest you want to lock
 
-This document identifies 3 Spigot/Bukkit plugins:
-- LockettePro: https://www.spigotmc.org/resources/lockettepro-for-1-14-1-15-1-16.74354/
+This document identifies the following Spigot/Bukkit plugins:
+- LockettePro: place a sign on your chest to prevent other players from accessing its contents (https://www.spigotmc.org/resources/lockettepro-for-1-14-1-15-1-16.74354/)
 - World Gaurd: https://dev.bukkit.org/projects/worldguard (requires WorldEdit)
+- Set Home: https://www.spigotmc.org/resources/set-home.32748/
+- Private Messages: https://www.spigotmc.org/resources/privatemessages-1-7-1-16.54026/
+- Advanced Teleport (TP requests, warps): https://www.spigotmc.org/resources/advanced-teleport.64139/
+
+Other plugins considered but not may not be included:
 - EssentialsX: https://www.spigotmc.org/resources/essentialsx.9089/
+- Vault: (a lot of plugins depend on this, recommended install for good measures) https://dev.bukkit.org/projects/vault
 
 ## How to install spigot/bukkit plugins
 spigot plugins are compatiable with bukkit servers. See server_documentation.md on instruction on setting up spigot server.
