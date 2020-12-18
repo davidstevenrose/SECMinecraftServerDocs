@@ -5,6 +5,7 @@
 |----------|:-------------:|
 | 11/7/20 |  selected a machine and got Ubuntu running |
 | 11/18/20 |    created repository for documentation   | 
+| 12/18/20 |    Added instructions on setting up bukkit server   | 
 
 ## Mission
 The Software Engineering Club is proposing a Minecraft server for the club participants to help encourage involvement/networking of students independent of the classroom as well as providing a learning experience, and striving to promote retention in the program.
