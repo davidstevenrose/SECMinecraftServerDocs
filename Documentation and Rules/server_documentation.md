@@ -50,7 +50,7 @@ Operators are administrators of the Minecraft server. They may perform ops comma
 Add-ons are mods, resource packs, and data packs for the base game. The inclusion for add-ons can be negotiates with operators, club officers and the club members who use the server.
 
 # Spigot server
-The requirements provided by the club officers requires the instalation of a spigot server. The club officers would like to install spigot plugins such as World Gaurd, check lock, etc.
+The requirements provided by the club officers requires the instalation of a spigot server. The club officers would like to install spigot plugins such as World Gaurd, chest lock, etc.
 ## Server setup
 Create a directory other than the Minecraft directory. At this step, open JDK should already be installed. download the spigot build tools to the new directory:
 `wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar`
@@ -76,6 +76,10 @@ The parameter -XX:+UseConcMarkSweepGC defines the garbage collection to operate 
 Save the file and exit.
 Run minecraft for the first time using `./start.sh` and accept the EULA agreement as stated above.
 Running the new spigot server is now eauivalent to running a normal minecraft server. Make sure to run `screen ./start.sh` or the server wll shut down when you close your ssh connection. If a new ssh connection is started, run the following command to open the running server: `screen -r`. Run `stop` to stop the server.
+
+## Adding new plugins
+After the club officers have approved the inclusion of a new spigot or bukkit plugin, the plugin will have to be loaded into the server. To do this, move the plugin, which is a .JAR file, into the plugin folder located in the server directory. This folder should automatically be generated upon the first run of the server. Plugins can be added while the server is running. For plugins to take effect, the server must be stopped from the console. After rerunning the server, configuration files, if any, are generated. To apply the effects of the config, use the command `/reload`.
+To update plugins without stopping the server, create a folder called `update` in the plugins directory. Download the plugin you want to update; make sure the file name matches the name of the plugin in the plugins directory. Run `/reload` in game to make the following plugin updates.
 
 ## Reference:
 https://www.vpsserver.com/community/tutorials/4005/minecraft-spigot-bukkit-server-on-ubuntu/
