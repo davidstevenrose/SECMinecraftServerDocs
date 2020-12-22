@@ -11,7 +11,7 @@ Given the above plugins, the server acheives:
 
 This document identifies the following Spigot/Bukkit plugins:
 - LockettePro: place a sign on your chest to prevent other players from accessing its contents (https://www.spigotmc.org/resources/lockettepro-for-1-14-1-15-1-16.74354/)
-- World Gaurd: https://dev.bukkit.org/projects/worldguard (requires WorldEdit)
+- World Gaurd: https://dev.bukkit.org/projects/worldguard (requires WorldEdit: https://dev.bukkit.org/projects/worldedit)
 - Set Home: https://www.spigotmc.org/resources/set-home.32748/
 - Private Messages: https://www.spigotmc.org/resources/privatemessages-1-7-1-16.54026/
 - Advanced Teleport (TP requests, warps): https://www.spigotmc.org/resources/advanced-teleport.64139/
