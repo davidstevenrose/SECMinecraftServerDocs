@@ -57,11 +57,10 @@ Create a directory other than the Minecraft directory. At this step, open JDK sh
 `wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar`
 
 Start the build tools script to create the server files. The server files (.jar) will be created in the file location you are at right now:
-`
-git config —global —unset core.autocrif
 
-java -jar BuildTools.jar
-`
+`git config --global --unset core.autocrif`, then:
+`java -jar BuildTools.jar`
+
 The server files start to build. Copy the server files to the Minecraft directory, such as `/etc/minecraftserver`.
 `cp spigot.jar /etc/minecraftserver/`
 
@@ -76,7 +75,7 @@ echo "Server restarting in 5 seconds! Press control+c to stop!"; sleep 5; done;
 The parameter -XX:+UseConcMarkSweepGC defines the garbage collection to operate on the heap.
 Save the file and exit.
 Run minecraft for the first time using `./start.sh` and accept the EULA agreement as stated above.
-Running the new spigot server is now eauivalent to running a normal minecraft server. Make sure to run `screen ./start.sh` or the server wll shut down when you close your ssh connection. If a new ssh connection is started, run the following command to open the running server: `screen -r`. Run `stop` to stop the server.
+Running the new spigot server is now equivalent to running a normal minecraft server. Make sure to run `screen ./start.sh` or the server wll shut down when you close your ssh connection. If a new ssh connection is started, run the following command to open the running server: `screen -r`. Run `stop` to stop the server.
 
 ## Adding new plugins
 After the club officers have approved the inclusion of a new spigot or bukkit plugin, the plugin will have to be loaded into the server. To do this, move the plugin, which is a .JAR file, into the plugin folder located in the server directory. This folder should automatically be generated upon the first run of the server. Plugins can be added while the server is running. For plugins to take effect, the server must be stopped from the console. After rerunning the server, configuration files, if any, are generated. To apply the effects of the config, use the command `/reload`.
