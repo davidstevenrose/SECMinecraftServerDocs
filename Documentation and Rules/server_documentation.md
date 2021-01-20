@@ -58,7 +58,7 @@ Create a directory other than the Minecraft directory. At this step, open JDK sh
 
 Start the build tools script to create the server files. The server files (.jar) will be created in the file location you are at right now:
 
-`git config --global --unset core.autocrif`, then:
+`git config --global --unset core.autocrlf`, then:
 `java -jar BuildTools.jar`
 
 The server files start to build. Copy the server files to the Minecraft directory, such as `/etc/minecraftserver`.
